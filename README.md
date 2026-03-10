@@ -55,9 +55,6 @@ Aplicacion Java para gestionar libros en una biblioteca simple.
 2. `mvn compile`
 3. `java -cp target/classes BibliotecaUniajc.Main`
 
-
----
-
 ## Diagrama de Clases (Mermaid)
 
 ```mermaid
@@ -105,7 +102,7 @@ classDiagram
     Main "1" --> "1..*" LibroTexto : crea
     Main "1" --> "1..*" LibroTextoUNIAC : crea
     Main "1" --> "1..*" Novela : crea
-
+```
 
 
 ## 1) Situaciones donde no se podría realizar herencia
