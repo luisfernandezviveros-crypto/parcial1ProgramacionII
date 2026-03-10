@@ -55,15 +55,7 @@ Aplicacion Java para gestionar libros en una biblioteca simple.
 2. `mvn compile`
 3. `java -cp target/classes BibliotecaUniajc.Main`
 
-## Diagrama de clases
-
-- Archivo generado: `diagrama_clases.puml`
-- Herencia:
-  - `Libro` <- `LibroTexto` <- `LibroTextoUNIAC`
-  - `Libro` <- `Novela`
-- `Main` instancia todas las clases.
-
-### Mermaid (texto)
+## Diagrama de Clases (Mermaid)
 
 ```mermaid
 classDiagram
@@ -110,6 +102,49 @@ classDiagram
     Main "1" --> "1..*" LibroTexto : crea
     Main "1" --> "1..*" LibroTextoUNIAC : crea
     Main "1" --> "1..*" Novela : crea
-```
 
+
+
+## 1) Situaciones donde no se podría realizar herencia
+
+### Caso 1: clase final
+Yo explico que si declaro la clase base como `final`, no se puede heredar de ella.  
+Por ejemplo:
+
+```java
+package BibliotecaUniajc;
+
+public final class Libro {
+    // ...
+}
+
+Luego, al intentar:
+
+obtengo el error: cannot inherit from final Libro.
+
+Caso 2: constructor privado
+También digo que si Libro tiene sólo constructor privado, las subclases no pueden invocar super(...).
+
+Y en la subclase:
+
+El error sería: Libro(String,String,int,int) has private access.
+
+2) Dos nuevos atributos que puedo agregar
+String isbn en Libro: me permite identificar unívocamente cada libro.
+int anioPublicacion en Libro: indica el año de edición/presión.
+Son atributos reales en un sistema de biblioteca y tienen sentido.
+
+3) Método adicional que tiene sentido
+Propongo un método en Libro:
+
+Y luego en LibroTexto sobreescribirlo así:
+
+En LibroTextoUNIAC añado facultad, y en Novela añado genero.
+
+4) Comentario personal
+Yo nombro que el código actual funciona bien, pero esta actividad es analizar potenciales problemas de herencia:
+
+final bloquea herencia
+constructor private hace imposible construir subclase
+También señalo que agregando isbn, anioPublicacion y obtenerDescripcion() se mejora el dominio y facilita pruebas y salida en consola. ``````
 
