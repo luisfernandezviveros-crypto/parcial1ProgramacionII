@@ -55,6 +55,9 @@ Aplicacion Java para gestionar libros en una biblioteca simple.
 2. `mvn compile`
 3. `java -cp target/classes BibliotecaUniajc.Main`
 
+
+---
+
 ## Diagrama de Clases (Mermaid)
 
 ```mermaid
