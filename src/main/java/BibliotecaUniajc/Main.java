@@ -3,6 +3,7 @@ package BibliotecaUniajc;
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println("Parcial 1 - Programacion II");
 
         System.out.println("*** INICIO ***");
         System.out.println();
