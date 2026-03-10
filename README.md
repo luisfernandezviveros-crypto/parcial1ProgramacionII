@@ -1,50 +1,71 @@
-# parcial1ProgramacionII
+# Parcial 1 - Programacion II
 
-Descripcion
+## Descripcion
 
 Aplicacion Java para gestionar libros en una biblioteca simple.
-Muestra herencia de clases: Libro, LibroTexto, LibroTextoUNIAC y Novela.
-Usa metodos de prestamo, devolucion, obtenerCopiasDisponibles y toString para imprimir informacion.
 
-Estructura de carpetas
-src/main/java/BibliotecaUniajc
-Clases
+- Implementa Programacion Orientada a Objetos (POO) y herencia.
+- Maneja libros generales y libros especializados (texto, universitarios, novelas).
+- Incluye operaciones de prestamo, devolucion y calculo de copias disponibles.
+- Muestra informacion en consola usando toString() en cada clase.
 
-Libro
-Atributos titulo, autor, copiasTotales y copiasPrestadas.
-Incluye constructor y los metodos prestamo, devolucion, obtenerCopiasDisponibles y toString.
+## Estructura de carpetas
 
-LibroTexto
-Extiende Libro y agrega el atributo curso.
+- `src/main/java/BibliotecaUniajc`
 
-LibroTextoUNIAC
-Extiende LibroTexto y agrega el atributo facultad.
+## Clases
 
-Novela
-Extiende Libro y agrega el atributo genero.
+### Libro
 
-Main
-Metodo main que crea e imprime objetos de Libro, LibroTexto, LibroTextoUNIAC y Novela.
+- Atributos: `titulo`, `autor`, `copiasTotales`, `copiasPrestadas`.
+- Constructores: vacio y con parametros.
+- Metodos:
+  - `boolean prestamo()`
+  - `boolean devolucion()`
+  - `int obtenerCopiasDisponibles()`
+  - `String toString()`
 
-Ejecucion
-cd demo
-mvn compile
-java -cp target/classes BibliotecaUniajc.Main
-Diagrama de clases
+### LibroTexto
 
-Archivo generado: diagrama_clases.puml
-Herencia: Libro <- LibroTexto <- LibroTextoUNIAC y Libro <- Novela.
-La clase Main instancia todas las clases del sistema.
+- Extiende `Libro`.
+- Atributo extra: `curso`.
+- Sobrescribe `toString()` para incluir `curso`.
 
-Objetivo
+### LibroTextoUNIAC
 
-Practicar programacion orientada a objetos e herencia en Java.
-Implementar una clase base y subclases con atributos y metodos propios.
-Mostrar la ejecucion en consola utilizando el metodo toString de cada objeto.
+- Extiende `LibroTexto`.
+- Atributo extra: `facultad`.
+- Sobrescribe `toString()` para incluir `facultad`.
 
-## Diagrama de Clases
+### Novela
 
-### Mermaid
+- Extiende `Libro`.
+- Atributo extra: `genero`.
+- Sobrescribe `toString()` para incluir `genero`.
+
+### Main
+
+- Clase principal con `public static void main(String[] args)`.
+- Crea instancias de `Libro`, `LibroTexto`, `LibroTextoUNIAC` y `Novela`.
+- Imprime las instancias y demuestra la herencia y el comportamiento de los metodos.
+
+## Ejecucion
+
+1. `cd demo`
+2. `mvn compile`
+3. `java -cp target/classes BibliotecaUniajc.Main`
+
+## Diagrama de clases
+
+- Archivo generado: `diagrama_clases.puml`
+- Herencia:
+  - `Libro` <- `LibroTexto` <- `LibroTextoUNIAC`
+  - `Libro` <- `Novela`
+- `Main` instancia todas las clases.
+
+### Mermaid (texto)
+
+```mermaid
 classDiagram
     class Libro {
         - String titulo
@@ -89,3 +110,6 @@ classDiagram
     Main "1" --> "1..*" LibroTexto : crea
     Main "1" --> "1..*" LibroTextoUNIAC : crea
     Main "1" --> "1..*" Novela : crea
+```
+
+
