@@ -1,5 +1,5 @@
 package BibliotecaUniajc;
-public class LibroUniajc {
+public class Libro {
     // Atributos de la clase 
     private String titulo;
     private String autor;
@@ -7,9 +7,9 @@ public class LibroUniajc {
     private int  copiasPrestadas;
 
     // construtores 
-    public LibroUniajc() {
+    public Libro() {
     }
-    public LibroUniajc(String titulo, String autor, int copiasTotales, int copiasPrestadas) {
+    public Libro(String titulo, String autor, int copiasTotales, int copiasPrestadas) {
         this.titulo = titulo;
         this.autor = autor;
         this.copiasTotales = copiasTotales;

@@ -1,11 +1,11 @@
 package BibliotecaUniajc;
 
-public class LibroTxt extends LibroUniajc {
+public class LibroTexto extends Libro {
 
     private String curso;
 
     // constructor
-    public LibroTxt(String titulo, String autor,  int copiasTotales, int copiasPrestadas, String curso) {
+    public LibroTexto(String titulo, String autor,  int copiasTotales, int copiasPrestadas, String curso) {
 
         super(titulo, autor, copiasTotales, copiasPrestadas);
         this.curso = curso;

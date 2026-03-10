@@ -8,13 +8,13 @@ public class Main {
         System.out.println("*** INICIO ***");
         System.out.println();
 
-        LibroUniajc libro1 = new LibroUniajc("Batman","LR",10,2);
+        Libro libro1 = new Libro("Batman","LR",10,2);
 
-        LibroTxt libro2 = new LibroTxt("Programacion","Ana",8,1,"Programacion II");
+        LibroTexto libro2 = new LibroTexto("Programacion","Ana",8,1,"Programacion II");
 
-        LibroTxtU libro3 = new LibroTxtU("Estructura de Datos","Luis Gomez",6,2,"Estructuras","Ingenieria");
+        LibroTextoUNIAC libro3 = new LibroTextoUNIAC("Estructura de Datos","Luis Gomez",6,2,"Estructuras","Ingenieria");
 
-        Tele novela1 = new Tele("El misterio", "Juan ",5,1,"Suspenso");
+        Novela novela1 = new Novela("El misterio", "Juan ",5,1,"Suspenso");
 
         System.out.println(libro1);
         System.out.println(libro2);

@@ -1,6 +1,6 @@
 package BibliotecaUniajc;
 
-public class LibroTxtU extends LibroTxt {
+public class LibroTxtU extends LibroTextoUNIAC{
 
     private String facultad;
 

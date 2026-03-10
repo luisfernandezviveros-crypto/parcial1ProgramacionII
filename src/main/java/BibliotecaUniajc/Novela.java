@@ -1,11 +1,11 @@
 package BibliotecaUniajc;
 
-public class Tele extends LibroUniajc {
+public class Novela extends LibroUniajc {
 
     private String genero;
 
     // constructor
-    public Tele(String titulo, String autor, int copiasTotales, int copiasPrestadas, String genero) {
+    public Novela(String titulo, String autor, int copiasTotales, int copiasPrestadas, String genero) {
 
         super(titulo, autor, copiasTotales, copiasPrestadas);
         this.genero = genero;
